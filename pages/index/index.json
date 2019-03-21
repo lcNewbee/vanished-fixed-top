@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "nav-head": "/components/NavHead/index"
+  }
+}

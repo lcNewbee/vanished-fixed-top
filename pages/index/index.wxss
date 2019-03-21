@@ -1,0 +1,21 @@
+.container {
+  padding-bottom: 20px;
+}
+
+.container .padding-block {
+  background-color: antiquewhite;
+  width: 100%;
+  height: 250px;
+}
+
+.container .top-padding {
+  margin-top: 66px;
+  height: 50px;
+}
+.container .middle-input {
+  width:100%;
+  height: 30px;
+  margin: 10px 0;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
