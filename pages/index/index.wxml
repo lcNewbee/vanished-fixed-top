@@ -15,6 +15,7 @@
     <view>滚动前，页面的竖直距离：{{topDistBeforeScroll}}</view>
     <view>滚动后，页面的竖直距离：{{topDistAfterScroll}}</view>
   </view>
+  <!-- 在元素未获取焦点时，获取元素的位置信息 -->
   <button bindtap="onButtonClick">获取输入框3顶部距离显示窗口的距离</button>
   <input
     id="input3"
