@@ -11,8 +11,14 @@
     placeholder="输入框 2"
     class="middle-input"
   ></input>
-  <view class="padding-block"></view>
+  <view class="padding-block">
+    <view>滚动前，页面的竖直距离：{{topDistBeforeScroll}}</view>
+    <view>滚动后，页面的竖直距离：{{topDistAfterScroll}}</view>
+  </view>
+  <button bindtap="onButtonClick">获取输入框3顶部距离显示窗口的距离</button>
   <input
+    id="input3"
+    bindfocus="onInput3Focus"
     placeholder="输入框 3"
     class="middle-input"
   ></input>
