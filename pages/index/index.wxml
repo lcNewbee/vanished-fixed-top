@@ -4,16 +4,16 @@
   <view class="padding-block top-padding"></view>
   <input
     placeholder="输入框 1"
-    class="middle-input"
+    class="input-elem"
   ></input>
   <view class="padding-block"></view>
   <input
     placeholder="输入框 2"
-    class="middle-input"
+    class="input-elem"
   ></input>
   <view class="padding-block"></view>
   <input
     placeholder="输入框 3"
-    class="middle-input"
+    class="input-elem"
   ></input>
 </view>
