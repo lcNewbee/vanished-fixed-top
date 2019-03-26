@@ -1,10 +1,13 @@
 //index.js
 Page({
   data: {
+    isInput1Focus: false,
+    isInput2Focus: false,
     isInput3Focus: false
   },
   onInputTap(e) {
     const id = e.target.id
+    console.log('id:', id)
     Promise.all([
       this.calcElemPosById(id),
       this.calcViewportPos(),
@@ -16,7 +19,7 @@ Page({
     ]) => {
       // 假设键盘不超过视口高度的一半，则当输入框在页面上半部分，不滚动
       if (inputRectPos.bottom < viewportHeight / 2) {
-        this.setData({ isInput3Focus: true })
+        this.setData({ [`is${id}Focus`]: true })
         return
       }
       // 滚动位置 = 输入框距离视口顶部距离 + 页面已经滚动的距离 - 顶部栏的高度 - 滚动后输入框和顶部栏的距离
@@ -25,14 +28,15 @@ Page({
         scrollTop,
         duration: 300,
         complete: () => {
-          this.setData({ isInput3Focus: true })
+          this.setData({ [`is${id}Focus`]: true })
         }
       })
     })
   },
   onInputBlur(e) {
+    const id = e.target.id
     // 失去焦点后要保证输入框是禁用状态
-    this.setData({ isInput3Focus: false })
+    this.setData({ [`is${id}Focus`]: false })
   },
   // 计算输入框位置
   calcElemPosById(id) {

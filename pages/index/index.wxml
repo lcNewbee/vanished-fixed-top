@@ -5,15 +5,25 @@
   <input
     placeholder="输入框 1"
     class="input-elem"
+    id="Input1"
+    focus="{{isInput1Focus}}"
+    disabled="{{!isInput1Focus}}"
+    bindtap="onInputTap"
+    bindblur="onInputBlur"
   ></input>
   <view class="padding-block"></view>
   <input
     placeholder="输入框 2"
     class="input-elem"
+    id="Input2"
+    focus="{{isInput2Focus}}"
+    disabled="{{!isInput2Focus}}"
+    bindtap="onInputTap"
+    bindblur="onInputBlur"
   ></input>
   <view class="padding-block"></view>
   <input
-    id="input3"
+    id="Input3"
     placeholder="输入框 3"
     class="input-elem"
     focus="{{isInput3Focus}}"
